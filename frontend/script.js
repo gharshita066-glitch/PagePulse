@@ -27,6 +27,15 @@ async function auditWebsite() {
         });
 
         const data = await response.json();
+        if (!response.ok) {
+    result.innerHTML = `
+        <div class="card">
+            <h3>❌ Error</h3>
+            <p>${data.error}</p>
+        </div>
+    `;
+    return;
+}
 
         result.innerHTML = `
             <div class="card">
