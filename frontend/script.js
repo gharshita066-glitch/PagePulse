@@ -18,7 +18,7 @@ async function auditWebsite() {
 
     try {
 
-        const response = await fetch("http://localhost:3000/audit", {
+        const response = await fetch("https://pagepulse-iq45.onrender.com/audit", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
